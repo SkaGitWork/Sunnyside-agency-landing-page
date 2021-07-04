@@ -39,9 +39,10 @@ Users should be able to:
 
 ### What I learned
 
-Responsive website
-media queries
-rem
+- Responsive website
+- media queries
+- rem
+- Change image path via JavaScript
 
 ### Continued development
 
