@@ -12,7 +12,11 @@ function change_path(from, to) {
 
 // Switch between mobile and desktop images
 function reportWindowSize() {
-  console.log(window.outerWidth);
+  
+  if (window.outerWidth = 0){
+   setTimeout(reportWindowSize, 300); 
+  }
+  
   if (window.outerWidth <= 376) {
     change_path("desktop", "mobile");
   } else {
@@ -22,5 +26,4 @@ function reportWindowSize() {
 window.onresize = reportWindowSize;
 
 // First check
-console.log('test');
 reportWindowSize();
