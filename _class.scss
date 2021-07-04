@@ -1,0 +1,103 @@
+/* --------------------------------- Colors --------------------------------- */
+
+$learn_more_color_red: hsl(7, 99%, 70%);
+$learn_more_color_yellow: hsl(51, 100%, 49%);
+
+$graphic_design_text_color: hsl(167, 40%, 24%);
+$photography_text_color: hsl(198, 62%, 26%);
+
+$text_color_1: hsl(212, 27%, 19%);
+$text_color_2: hsl(213, 9%, 39%);
+$text_color_3: hsl(232, 10%, 55%);
+$text_color_4: hsl(210, 4%, 67%);
+
+$footer_color: hsl(168, 74%, 67%);
+$footer_title_color: hsl(161, 70%, 25%);
+$footer_text_color: hsl(168, 34%, 41%);
+
+/* ---------------------------------- Class --------------------------------- */
+html{
+    font-size: 18px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Fraunces;
+  box-sizing: border-box;
+  min-width: 270px;
+}
+
+// Risize image
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  z-index: -1;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* ------------------------------- Typography ------------------------------- */
+article {
+  text-align: center;
+}
+
+.title {
+  margin: 1em auto;
+    width: 90%;
+
+
+  font-family: Fraunces;
+  font-size: 2rem;
+  color: hsl(212, 27%, 19%);
+}
+
+.content {
+  margin: auto;
+    width: 90%;
+
+
+  line-height: 1.5em;
+  font-size: 1rem;
+  font-family: Barlow;
+  color: $text_color_3;
+  
+}
+
+/* --------------------------------- Colors --------------------------------- */
+.yellow {
+  background-color: $learn_more_color_yellow;
+}
+
+.red {
+  background-color: $learn_more_color_red;
+}
+
+.green {
+  color: $graphic_design_text_color;
+  letter-spacing: -0.8px;
+}
+
+.blue {
+  color: $photography_text_color;
+  letter-spacing: -0.8px;
+}
+
+/* ---------------------------- Absolute relative ---------------------------- */
+
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+  top: 60%;
+}

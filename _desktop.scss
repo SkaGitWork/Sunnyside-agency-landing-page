@@ -1,0 +1,221 @@
+/* --------------------------------- Desktop -------------------------------- */
+@media only screen and (min-width: 376px) {
+  .title {
+    font-size: 3rem;
+    margin: 1rem;
+  }
+
+  .content {
+    font-size: 1.1rem;
+    line-height: 1.8em;
+  }
+
+  /* --------------------------------- Header --------------------------------- */
+  .header {
+    @include flex_ro;
+
+    &__title {
+      margin: 0.5em 1em;
+    }
+
+    &__hamburger {
+      display: none;
+    }
+
+    &__nav-container {
+      display: block;
+    }
+
+    &__nav {
+      display: flex;
+
+      & li {
+        padding: 0.6em 1.2em;
+
+        &:last-child {
+          margin-right: 6rem;
+        }
+
+        & a {
+          color: white;
+        }
+
+        &:hover {
+          background-color: hsla(0, 0%, 100%, 0.219);
+          border-radius: 20px;
+        }
+      }
+    }
+
+    &__nav__triangle {
+      display: none;
+    }
+  }
+
+  /* ---------------------------------- Hero ---------------------------------- */
+
+  .hero {
+    &__title {
+      margin: 1.8em 1em;
+      font-size: 4vw;
+    }
+
+    &__arrow-down {
+      width: 2.5vw;
+      z-index: 1;
+    }
+  }
+
+  /* ----------------------------- Main container ----------------------------- */
+  .main-container {
+    &__section {
+      @include flex_rr;
+
+      &--flex {
+        @include flex_r;
+      }
+    }
+
+    & article {
+      width: 50%;
+    }
+
+    & img {
+      width: 50%;
+    }
+  }
+
+  /* --------------------------------- Content -------------------------------- */
+
+  .article {
+    display: flex;
+  }
+
+  .container {
+    @include flex_c;
+    align-items: flex-start;
+    text-align: left;
+    width: 70%;
+    margin: auto;
+
+    & * {
+      margin-left: 0;
+    }
+
+    & .title--stand-out {
+      font-size: 2.6rem;
+      margin-bottom: 1em;
+    }
+  }
+
+  .content-container {
+    width: 55%;
+    margin: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* ------------------------------- Learn more ------------------------------- */
+  .learn-more {
+    display: block;
+    margin-top: 3em;
+    margin-left: 6px;
+  }
+
+  .border {
+    width: 7.3em;
+  }
+
+  /* -------------------------- Graphic/ Photography -------------------------- */
+  .relative {
+    & img {
+      width: 100%;
+    }
+  }
+
+  .graphic__content-container{
+    // text-align: center;
+  }
+
+  .graphic__title {
+    font-size: 1.6em;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+
+  .graphic__content {
+    width: 55%;
+  }
+
+  .photography__content {
+    width: 55%;
+  }
+
+  /* ------------------------------ Testimonials ------------------------------ */
+  .testimonials-section {
+    padding-bottom: 4em;
+
+    &-title {
+      margin: 6rem 0 4rem;
+      font-size: 2rem;
+    }
+  }
+
+  .testimonials {
+    @include flex_r;
+    width: 86%;
+
+    & img {
+      width: auto;
+      margin: auto;
+      margin-bottom: 2em;
+    }
+
+    & .content {
+      margin: 1em 0;
+    }
+  }
+
+  .testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__content {
+      &--thomas {
+        width: 90%;
+      }
+    }
+  }
+
+  /* ------------------------------- 4 Pictures ------------------------------- */
+  .pictures-4 {
+    & img {
+      width: 25%;
+    }
+  }
+  /* --------------------------------- Footer --------------------------------- */
+  .footer {
+    &__container {
+      width: 25rem;
+      flex-direction: column;
+
+      margin: auto;
+    }
+  }
+}
+
+
+
+// TODO Responsive to other devices
+
+// Check Read me
+// Commit and push buttons
+// Upload solution
+
+// Make what i learned list:
+// * design first
+// * Use Figma
+// ...
+
+// Get new challenge

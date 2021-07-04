@@ -1,0 +1,299 @@
+/* --------------------------------- Header --------------------------------- */
+
+.hero-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.header {
+  &__top {
+    @include flex_ro;
+
+    & * {
+      margin: 1.5rem;
+    }
+
+    &__title {
+      color: white;
+      font-family: Arial;
+      font-weight: 900;
+      font-size: 2rem;
+    }
+  }
+
+  &__nav-container {
+    display: none;
+  }
+
+  &__hamburger {
+    background-image: url(images/icon-hamburger.svg);
+    width: 24px;
+    height: 18px;
+  }
+
+  #js-hamburger {
+    display: none;
+
+    /* ------------------------------- Display nav ------------------------------ */
+    &:checked ~ .header__nav-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      position: absolute;
+      top: 5em;
+      left: 50%;
+      transform: translateX(-50%);
+
+      width: 88%;
+      aspect-ratio: 1/1;
+      z-index: 5;
+    }
+
+    &:checked ~ .header__nav-container .header__nav {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 2rem 0;
+      margin: 0;
+
+      background-color: #fff;
+      text-align: center;
+
+      z-index: 2;
+
+      & li {
+        margin: 1em;
+
+        &:last-child a {
+          background-color: hsl(51, 100%, 49%);
+          padding: 0.8em 1.6em;
+          border-radius: 2em;
+          color: #000;
+          text-transform: uppercase;
+        }
+
+        & a {
+          color: $text_color_3;
+          font-family: Barlow;
+        }
+      }
+    }
+  }
+
+  &__nav__triangle {
+    position: relative;
+    top: 1px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 25px 25px;
+    border-color: transparent transparent #fff transparent;
+    z-index: 4;
+  }
+}
+
+/* ---------------------------------- Hero ---------------------------------- */
+.hero {
+  @include flex_c;
+  width: 100%;
+  align-items: center;
+  min-width: 270px;
+
+  &__title {
+    margin: 2rem 1rem;
+    text-align: center;
+    letter-spacing: 5px;
+    color: white;
+    font-size: 11.5vw;
+    font-family: Fraunces;
+  }
+
+  &__arrow-down {
+    width: 7.5vw;
+    z-index: 1;
+  }
+}
+
+/* --------------------------------- Section -------------------------------- */
+.article {
+  padding-top: 1rem;
+  padding-bottom: 4rem;
+}
+
+
+/* ------------------------------- Learn more ------------------------------- */
+.learn-more {
+  position: relative;
+  display: inline-block;
+  width: unset;
+  margin-top: 2em;
+  color: hsl(212, 27%, 19%);
+  font-family: Fraunces;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 900;
+
+  &:hover {
+    & .border {
+      opacity: 1;
+    }
+  }
+}
+
+.border {
+  position: absolute;
+  top: 60%;
+  height: 10px;
+  width: 100%;
+  $border_padding: 0.5em;
+  padding: 0 $border_padding;
+
+  border-radius: 20px;
+
+  z-index: -1;
+  transform: translateX(-$border_padding);
+  box-sizing: content-box;
+  opacity: 0.25;
+}
+
+/* --------------------------------- Content -------------------------------- */
+.stand__content{
+  width: 89%;
+}
+
+
+/* -------------------------- Graphic/ Photography -------------------------- */
+.graphic__content {
+  width: 95%;
+
+}
+
+@media only screen and (max-width: 320px) {
+  .graphic__content-container {
+    top: 55%;
+  }
+}
+
+.photography__content {
+  width: 92%;
+}
+
+/* ------------------------------ Testimonials ------------------------------ */
+.testimonials-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 5em;
+}
+
+.testimonials-section-title {
+  letter-spacing: 3px;
+  color: $text_color_3;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: Fraunces;
+  margin: 3em 0 0 0;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+strong {
+  font-weight: 600;
+  margin-bottom: 0.5em;
+  margin-top: 1.5em;
+}
+
+.testimonial__client-job {
+  display: block;
+  font-size: 0.85em;
+  color: $text_color_4;
+  font-family: Barlow;
+}
+
+.testimonial__content {
+  color: $text_color_1;
+}
+
+.thomas_testimonial__content {
+  width: 87%;
+}
+
+.profile-picture {
+  height: 75px;
+  width: auto;
+  border-radius: 50%;
+  margin: 3.5em 0 2em 0;
+}
+
+/* ------------------------------- 4 pictures ------------------------------- */
+.pictures-4 {
+  display: flex;
+  flex-wrap: wrap;
+
+  & img {
+    width: 50%;
+  }
+}
+
+/* --------------------------------- Footer --------------------------------- */
+.footer {
+  background-color: $footer_color;
+  padding: 2em 0;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    color: $footer_title_color;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+  }
+
+  &__links {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 4rem;
+
+    & li a {
+      color: $footer_text_color;
+    }
+
+    & li a:hover {
+      color: white;
+    }
+  }
+
+  &__social-media {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    padding: 0;
+
+    & svg:hover path {
+      fill: white;
+    }
+  }
+}
+
+@media only screen and (max-width: 320px){
+  .absolute{
+    top: 50%;
+  }
+
+  .header__hamburger{
+    margin-right: 1rem;
+  }
+
+}

@@ -1,0 +1,99 @@
+/* --------------------------------- Laptop --------------------------------- */
+@media screen and (min-width: 376px) and (max-width: 1024px) {
+  html {
+    font-size: 14px;
+  }
+
+  .graphic__content {
+    width: 60%;
+  }
+
+  .photography__content {
+    width: 60%;
+  }
+
+  .testimonial img {
+    margin-top: 0;
+  }
+}
+
+/* --------------------------------- Tablet --------------------------------- */
+@media only screen and (max-width: 769px) and (min-width: 376px) {
+  html {
+    font-size: 12px;
+  }
+
+  .graphic__content {
+    width: 80%;
+  }
+
+  .photography__content {
+    width: 80%;
+  }
+
+  .absolute {
+    top: 55%;
+  }
+
+  .title--stand-out {
+    width: 100%;
+  }
+
+  .testimonial__content--thomas {
+    width: 100%;
+  }
+}
+
+/* ------------------------------ Large Mobile ------------------------------ */
+@media only screen and (max-width: 426px) and (min-width: 376px) {
+  html {
+    font-size: 10px;
+  }
+
+  .header__nav li:last-child{
+    margin-right: 1rem;
+  }
+
+  .main-container img {
+    height: 50%;
+    margin: auto;
+  }
+
+  .relative img {
+    height: 100%;
+  }
+
+  .graphic__content {
+    font-size: 0.8rem;
+  }
+
+  .photography__content {
+    font-size: 0.9rem;
+  }
+
+  .absolute {
+    top: 50%;
+  }
+
+  .testimonials-section {
+    padding: 0;
+  }
+
+  .testimonial img {
+    height: 15%;
+    margin: 0rem;
+  }
+
+  .testimonials {
+    justify-content: center;
+    height: 30rem;
+  }
+
+  .testimonial__content {
+    width: 75%;
+  }
+
+  .testimonials-section-title {
+    margin: 4rem;
+  }
+}
