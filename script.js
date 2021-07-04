@@ -9,10 +9,11 @@ function change_path(from, to) {
     }
   }
 }
-
+var user_width;
 // Switch between mobile and desktop images
 function reportWindowSize() {
-  if (window.outerWidth <= 376) {
+  user_width = document.documentElement.clientWidth;
+  if (user_width <= 376) {
     change_path("desktop", "mobile");
   } else {
     change_path("mobile", "desktop");
@@ -21,4 +22,5 @@ function reportWindowSize() {
 window.onresize = reportWindowSize;
 
 // First check
+user_width = document.documentElement.clientWidth;
 reportWindowSize();
